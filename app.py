@@ -86,11 +86,11 @@ with st.container():
         # --- LOTTIE ANIMATION ---
         # We load a Lottie animation from a URL. 
         # You can find more at https://lottiefiles.com/
-        lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_S1em3k.json")
+        lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
         if lottie_coding:
             st_lottie(
                 lottie_coding,
-                speed=1,
+                speed=10,
                 reverse=False,
                 loop=True,
                 quality="high", # "low", "medium", "high"
