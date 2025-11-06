@@ -5,7 +5,7 @@ from streamlit_lottie import st_lottie
 # --- PAGE CONFIG ---
 st.set_page_config(
     page_title="Marouane Laamiri | My Portfolio",
-    page_icon="/home/malaamir/Downloads/mali.svg",
+    page_icon=":computer:",
     layout="wide",
 )
 
@@ -16,6 +16,49 @@ def load_lottieurl(url: str):
     if r.status_code != 200:
         return None
     return r.json()
+
+# NEW: Function to set a background image
+def set_background(image_url):
+    """
+    Sets a background image for the Streamlit app.
+    
+    Parameters:
+    - image_url (str): The URL of the image to be used as the background.
+    """
+    # We use st.markdown to inject custom CSS
+    # This CSS targets the main app container
+    st.markdown(
+        f"""
+        <style>
+        [data-testid="stAppViewContainer"] {{
+            background-image: url("{image_url}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }}
+        
+        /* This makes the main content block slightly transparent for a better look */
+        [data-testid="stBlockContainer"] {{
+            background-color: rgba(255, 255, 255, 0.85); /* White with 85% opacity */
+            border-radius: 10px;
+            padding: 2rem;
+        }}
+        
+        /* Optional: Make headers match your style */
+        h1, h2, h3 {{
+            color: #111111; /* Dark text color for readability */
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+# --- END OF HELPER FUNCTIONS ---
+
+
+# --- SET BACKGROUND ---
+# Call the function with your image URL
+set_background("https://images.unsplash.com/photo-1504805572947-34fad45aed93")
 
 # --- 1. HEADER SECTION ---
 with st.container():
@@ -43,12 +86,11 @@ with st.container():
         # --- LOTTIE ANIMATION ---
         # We load a Lottie animation from a URL. 
         # You can find more at https://lottiefiles.com/
-        lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
-        
+        lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_S1em3k.json")
         if lottie_coding:
             st_lottie(
                 lottie_coding,
-                speed=6,
+                speed=1,
                 reverse=False,
                 loop=True,
                 quality="high", # "low", "medium", "high"
@@ -67,8 +109,8 @@ st.header("About Me")
 st.write(
     """
     A computer science professional with acquired experience in computer hardware and OS maintenance, I have developed a strong background in computers and server setups as an IT technician within various local associations, and schools.
-	Furthermore, I am a computer technician who is dedicated to continually improving my skills and growing in the programming field. During my university studies in Ukraine, I developed a keen interest in programming and cloud computing, and I have pursued numerous training and certification programs, including AWS Certified Cloud Computing.
-	I would describe myself as a problem solver who is agile and results-oriented. I believe that my skills make me a valuable asset to the IT industry.
+    Furthermore, I am a computer technician who is dedicated to continually improving my skills and growing in the programming field. During my university studies in Ukraine, I developed a keen interest in programming and cloud computing, and I have pursued numerous training and certification programs, including AWS Certified Cloud Computing.
+    I would describe myself as a problem solver who is agile and results-oriented. I believe that my skills make me a valuable asset to the IT industry.
     
     When I'm not coding, Im asleep or playing video games.
     """
@@ -84,9 +126,9 @@ st.write("Here are a few projects I've been working on. You can find more on my 
 st.subheader("Cub3D Fake 3D Game")
 st.write(
     "Cub3D is a simple 3D game engine project inspired by the classic game Wolfenstein 3D. "
-	"It is developed using the C programming language and utilizes the MiniLibX graphics library for rendering. "
-	"The project focuses on implementing raycasting techniques to create a 3D environment from a 2D map, allowing players to navigate through a maze-like structure. "
-	"Cub3D showcases fundamental concepts of computer graphics, game development, and low-level programming."
+    "It is developed using the C programming language and utilizes the MiniLibX graphics library for rendering. "
+    "The project focuses on implementing raycasting techniques to create a 3D environment from a 2D map, allowing players to navigate through a maze-like structure. "
+    "Cub3D showcases fundamental concepts of computer graphics, game development, and low-level programming."
 )
 st.write("[View on GitHub](https://github.com/Marouanelaamiri/cub3D)") #<-- Update this link
 
