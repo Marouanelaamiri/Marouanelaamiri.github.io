@@ -6,7 +6,7 @@
 /*   By: malaamir <malaamir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 21:08:31 by malaamir          #+#    #+#             */
-/*   Updated: 2025/11/14 13:02:21 by malaamir         ###   ########.fr       */
+/*   Updated: 2025/11/14 13:13:19 by malaamir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,29 @@
 }
 
 body {
-	font-family: 'Inter', sans-serif;
-	color: #FFFFFF;
-	background-color: #0c001f;
-	/* Dark Purple Background */
-	padding-top: 80px;
-	/* Leave space for the fixed navbar */
-}
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    background-color: #0c001f; /* Fallback dark purple if image fails to load */
+    padding-top: 80px; /* Leave space for the fixed navbar */
 
+    /* --- NEW: Background Image Styles --- */
+    background-image: url('background.jpg'); /* <-- Path to your uploaded image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    background-attachment: fixed; /* Keep image fixed when scrolling */
+}
+/* --- NEW: Background Overlay for Readability --- */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Place it behind content but above the background image */
+}
 .container {
 	width: 90%;
 	max-width: 1100px;
