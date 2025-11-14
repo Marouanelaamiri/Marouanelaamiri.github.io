@@ -6,7 +6,7 @@
 /*   By: malaamir <malaamir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 21:08:31 by malaamir          #+#    #+#             */
-/*   Updated: 2025/11/14 13:18:02 by malaamir         ###   ########.fr       */
+/*   Updated: 2025/11/14 13:22:28 by malaamir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,7 @@ a {
 .nav-pixel-bat {
 	width: 32px;
 	height: 32px;
-	margin-right: 0.75rem;
+	margin-right: 0.50rem;
 	image-rendering: pixelated;
 }
 
