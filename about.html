@@ -5,44 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Marouane Laamiri</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/tailwind.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        dark: '#0c001f',
-                        primary: '#6c42d3',
-                        secondary: '#b0a8d1',
-                        nav: '#1a013d',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        pixel: ['"Press Start 2P"', 'cursive'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/site.css">
 </head>
 
 <body class="text-white antialiased min-h-screen flex flex-col relative">
 
+    <div class="site-background" aria-hidden="true"></div>
     <div class="fixed inset-0 bg-black/60 -z-10"></div>
 
-    <nav class="fixed w-full top-0 z-50 bg-nav/95 backdrop-blur-md border-b border-primary/30 shadow-lg">
+    <nav class="fixed w-full top-0 z-50 bg-nav/95 border-b border-primary/30 shadow-lg">
         <div class="w-full px-4 sm:px-8 h-20 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 group">
                 <span class="text-lg sm:text-xl font-bold tracking-tight group-hover:text-primary transition-colors">Marouane Laamiri</span>
@@ -57,7 +31,7 @@
 
     <main class="flex-grow container mx-auto px-6 pt-32 pb-20 max-w-5xl">
 
-        <div class="bg-nav/60 backdrop-blur-md rounded-3xl border border-primary/30 shadow-2xl overflow-hidden">
+        <div class="bg-nav/90 rounded-3xl border border-primary/30 shadow-2xl overflow-hidden">
 
             <div class="bg-gradient-to-r from-primary to-purple-800 p-6 text-center relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
@@ -70,7 +44,7 @@
                 <div class="space-y-8">
                     <div class="relative mx-auto w-48 h-48 group">
                         <div class="absolute inset-0 bg-primary rounded-full blur opacity-50 group-hover:opacity-80 transition duration-500"></div>
-                        <img src="https://raw.githubusercontent.com/Marouanelaamiri/my-portfolio/main/avatar.png" alt="Marouane" class="relative w-full h-full rounded-full border-4 border-white object-cover shadow-xl">
+                        <img src="assets/avatar.png" alt="Marouane" width="400" height="400" loading="lazy" decoding="async" class="relative w-full h-full rounded-full border-4 border-white object-cover shadow-xl">
                         <div class="absolute bottom-2 right-2 bg-green-500 w-6 h-6 rounded-full border-2 border-white" title="Online"></div>
                     </div>
 
@@ -140,27 +114,27 @@
                             <span class="text-2xl">⚡</span> Skill Tree
                         </h3>
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition-colors">
                                 <span class="block text-xl mb-1">🐳</span>
                                 <span class="font-bold text-sm">Docker</span>
                             </div>
-                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition-colors">
                                 <span class="block text-xl mb-1">⚙️</span>
                                 <span class="font-bold text-sm">C++ (98/11)</span>
                             </div>
-                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition-colors">
                                 <span class="block text-xl mb-1">🚀</span>
                                 <span class="font-bold text-sm">TypeScript</span>
                             </div>
-                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition-colors">
                                 <span class="block text-xl mb-1">🐧</span>
                                 <span class="font-bold text-sm">Linux/Unix</span>
                             </div>
-                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition-colors">
                                 <span class="block text-xl mb-1">🗄️</span>
                                 <span class="font-bold text-sm">MariaDB/SQL</span>
                             </div>
-                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition-colors">
                                 <span class="block text-xl mb-1">🎨</span>
                                 <span class="font-bold text-sm">React/Web</span>
                             </div>
@@ -174,7 +148,7 @@
                            class="bg-primary hover:bg-purple-600 text-white px-8 py-3 rounded-xl font-bold transition transform hover:-translate-y-1 shadow-lg shadow-primary/30 flex items-center gap-2">
                             Let's Work Together
                         </a>
-                        <a href="Marouane_Laamiri_Resume.pdf" 
+                        <a href="assets/Marouane_Laamiri_Resume.pdf" 
                            target="_blank" 
                            class="border border-secondary/50 hover:bg-secondary/10 text-secondary px-8 py-3 rounded-xl font-bold transition transform hover:-translate-y-1">
                             Download Resume

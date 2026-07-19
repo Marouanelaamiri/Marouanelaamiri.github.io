@@ -18,16 +18,15 @@ body {
 }
 
 /*
- * Performance: the original 55 MP JPEG is replaced with a display-sized WebP
- * and rendered as a single fixed layer. This avoids costly background-attachment
- * painting while the page scrolls.
+ * Performance: render the wallpaper as a single fixed layer. This avoids costly
+ * background-attachment painting while the page scrolls.
  */
 .site-background {
     position: fixed;
     inset: 0;
     z-index: -2;
     pointer-events: none;
-    background: #0c001f url('background-1920.webp') center / cover no-repeat;
+    background: #0c001f url('background.jpg') center / cover no-repeat;
 }
 
 /* Kept from the original home-page typewriter treatment. */

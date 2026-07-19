@@ -5,36 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Studies | Marouane Laamiri</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/tailwind.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        dark: '#0c001f',
-                        primary: '#6c42d3',
-                        secondary: '#b0a8d1',
-                        nav: '#1a013d',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="assets/site.css">
     <style>
-        body {
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-color: #0c001f;
-        }
-
         .pixelated {
             image-rendering: pixelated;
         }
@@ -43,9 +17,10 @@
 
 <body class="text-white antialiased min-h-screen flex flex-col relative">
 
+    <div class="site-background" aria-hidden="true"></div>
     <div class="fixed inset-0 bg-black/60 -z-10"></div>
 
-    <nav class="fixed w-full top-0 z-50 bg-nav/95 backdrop-blur-md border-b border-primary/30 shadow-lg">
+    <nav class="fixed w-full top-0 z-50 bg-nav/95 border-b border-primary/30 shadow-lg">
         <div class="w-full px-4 sm:px-8 h-20 flex justify-between items-center">
             <a href="index.html" class="flex items-center group">
                 <span
@@ -69,11 +44,11 @@
 
         <!-- NEW: INCEPTION PROJECT -->
         <div
-            class="flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition-all duration-500 mb-16 group">
+            class="project-card flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/90 p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition duration-500 mb-16 group">
             <div class="flex-1 order-1">
-                <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*-dRoT1mJQNflfMp2.png"
-                    alt="Inception Docker Architecture"
-                    class="w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500 bg-white/5">
+                <img src="assets/coding.gif"
+                    alt="Inception Docker Architecture" width="640" height="360" loading="lazy" decoding="async"
+                    class="project-media w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500 bg-white/5">
             </div>
             <div class="flex-1 space-y-6 order-2">
                 <h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Inception: Docker Infrastructure</h3>
@@ -103,7 +78,7 @@
 
         <!-- NEW: TRANSCENDENT PROJECT -->
         <div
-            class="flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition-all duration-500 mb-16 group">
+            class="project-card flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/90 p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition duration-500 mb-16 group">
             <div class="flex-1 space-y-6 order-2 md:order-1">
                 <h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Transcendent: Full-Stack Web Platform</h3>
 
@@ -127,21 +102,20 @@
                 </div>
             </div>
             <div class="flex-1 order-1 md:order-2">
-                <!-- Using direct Tenor Media link extracted from your request -->
-                <img src="https://media.tenor.com/mh4ID69aoHUAAAAi/big-brain.gif"
-                    alt="Transcendent Web Platform"
-                    class="w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
+                <img src="assets/bat-man.gif"
+                    alt="Transcendent Web Platform" width="512" height="512" loading="lazy" decoding="async"
+                    class="project-media w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
             </div>
         </div>
 
         <!-- ORIGINAL PROJECTS PRESERVED BELOW -->
 
         <div
-            class="flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition-all duration-500 mb-16 group">
+            class="project-card flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/90 p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition duration-500 mb-16 group">
             <div class="flex-1 order-1">
-                <img src="https://raw.githubusercontent.com/Marouanelaamiri/my-portfolio/main/minishell.png"
-                    alt="Minishell Architecture"
-                    class="w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
+                <img src="assets/minishell.png"
+                    alt="Minishell Architecture" width="1000" height="564" loading="lazy" decoding="async"
+                    class="project-media w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="flex-1 space-y-6 order-2">
                 <h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Minishell: System
@@ -179,7 +153,7 @@
         </div>
 
         <div
-            class="flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition-all duration-500 mb-16 group">
+            class="project-card flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/90 p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition duration-500 mb-16 group">
             <div class="flex-1 space-y-6 order-2 md:order-1">
                 <h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Philosophers:
                     Concurrency</h3>
@@ -214,18 +188,18 @@
                     class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View Documentation ▹</a>
             </div>
             <div class="flex-1 order-1 md:order-2">
-                <img src="https://raw.githubusercontent.com/Marouanelaamiri/my-portfolio/main/philo.gif"
-                    alt="Concurrent Computing Study"
-                    class="w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
+                <img src="assets/philo.gif"
+                    alt="Concurrent Computing Study" width="640" height="360" loading="lazy" decoding="async"
+                    class="project-media w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
             </div>
         </div>
 
         <div
-            class="flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition-all duration-500 mb-16 group">
+            class="project-card flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/90 p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition duration-500 mb-16 group">
             <div class="flex-1 order-1">
-                <img src="https://raw.githubusercontent.com/Marouanelaamiri/my-portfolio/main/cub3d.gif"
-                    alt="Graphics Engine Study"
-                    class="w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
+                <img src="assets/cub3d.gif"
+                    alt="Graphics Engine Study" width="640" height="360" loading="lazy" decoding="async"
+                    class="project-media w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="flex-1 space-y-6 order-2">
                 <h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Cub3D: Graphics
