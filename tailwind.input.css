@@ -1,9 +1,0 @@
-/*!
- * Source for assets/tailwind.min.css.
- *
- * Performance change: compile this file before deployment so pages load a
- * small static stylesheet instead of downloading and running Tailwind Play CDN.
- */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

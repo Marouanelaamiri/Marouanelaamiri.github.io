@@ -2,240 +2,285 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies | Marouane Laamiri</title>
-    <link rel="stylesheet" href="assets/tailwind.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/site.css">
-    <style>
-        .pixelated {
-            image-rendering: pixelated;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Case Studies | Marouane Laamiri</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						dark: '#0c001f',
+						primary: '#6c42d3',
+						secondary: '#b0a8d1',
+						nav: '#1a013d',
+					},
+					fontFamily: {
+						sans: ['Inter', 'sans-serif'],
+					}
+				}
+			}
+		}
+	</script>
+	<style>
+		body {
+			background-image: url('assests/background.jpg');
+			background-size: cover;
+			background-position: center;
+			background-attachment: scroll;
+			background-repeat: no-repeat;
+			background-color: #0c001f;
+		}
+
+		.pixelated {
+			image-rendering: pixelated;
+		}
+	</style>
 </head>
 
 <body class="text-white antialiased min-h-screen flex flex-col relative">
 
-    <div class="site-background" aria-hidden="true"></div>
-    <div class="fixed inset-0 bg-black/60 -z-10"></div>
+	<div class="fixed inset-0 bg-black/60 -z-10"></div>
 
-    <nav class="fixed w-full top-0 z-50 bg-nav/95 border-b border-primary/30 shadow-lg">
-        <div class="w-full px-4 sm:px-8 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex items-center group">
-                <span
-                    class="text-lg sm:text-xl font-bold tracking-tight group-hover:text-primary transition-colors">Marouane
-                    Laamiri</span>
-            </a>
-            <ul class="flex gap-4 sm:gap-10 text-sm sm:text-base font-medium text-gray-300">
-                <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
-                <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
-                <li><a href="projects.html" class="hover:text-primary transition-colors">Projects</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main class="flex-grow container mx-auto px-6 pt-32 pb-20 max-w-6xl">
+	<nav class="fixed w-full top-0 z-50 bg-nav/95 backdrop-blur-md border-b border-primary/30 shadow-lg">
+		<div class="w-full px-4 sm:px-8 h-20 flex justify-between items-center">
+			<a href="index.html" class="flex items-center group">
+				<span
+					class="text-lg sm:text-xl font-bold tracking-tight group-hover:text-primary transition-colors">Marouane
+					Laamiri</span>
+			</a>
+			<ul class="flex gap-4 sm:gap-10 text-sm sm:text-base font-medium text-gray-300">
+				<li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+				<li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
+				<li><a href="projects.html" class="hover:text-primary transition-colors">Projects</a></li>
+			</ul>
+		</div>
+	</nav>
+	<main class="flex-grow container mx-auto px-6 pt-32 pb-20 max-w-6xl">
 
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4">Technical Case Studies</h2>
-            <p class="text-secondary text-lg max-w-2xl mx-auto">Engineering robust, scalable, and stable software
-                solutions through low-level systems programming.</p>
-        </div>
+		<div class="text-center mb-16">
+			<h2 class="text-4xl font-bold mb-4">Technical Case Studies</h2>
+			<p class="text-secondary text-lg max-w-2xl mx-auto">Engineering robust, scalable, and stable software
+				solutions through low-level systems programming.</p>
+		</div>
 
-        <!-- NEW: INCEPTION PROJECT -->
-        <div
-            class="project-card flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/90 p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition duration-500 mb-16 group">
-            <div class="flex-1 order-1">
-                <img src="assets/coding.gif"
-                    alt="Inception Docker Architecture" width="640" height="360" loading="lazy" decoding="async"
-                    class="project-media w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500 bg-white/5">
-            </div>
-            <div class="flex-1 space-y-6 order-2">
-                <h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Inception: Docker Infrastructure</h3>
+		<!-- NEW: INCEPTION PROJECT -->
+		<div
+			class="flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition-all duration-500 mb-16 group" style="content-visibility:auto; contain-intrinsic-size: 1px 560px;">
+			<div class="flex-1 order-1">
+				<img src="assests/coding.gif" loading="eager" decoding="async"
+					alt="Inception Docker Architecture"
+					class="w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500 bg-white/5">
+			</div>
+			<div class="flex-1 space-y-6 order-2">
+				<h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Inception: Docker
+					Infrastructure</h3>
 
-                <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
-                    <p><strong>The Challenge:</strong> Virtualizing a complete, secure infrastructure stack using isolated containers under strict 42 network constraints.</p>
-                    <p><strong>The Solution:</strong> Orchestrated an environment using <strong>Docker Compose</strong> featuring Nginx, WordPress, and MariaDB. Configured custom Dockerfiles, managed persistent volumes, and established secure inner-container networking.</p>
-                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
-                        <p class="font-bold text-primary mb-2 text-xs uppercase tracking-wider">Technical Proof:</p>
-                        <ul class="list-disc list-inside space-y-1 text-xs">
-                            <li>Implemented <strong>TLS/SSL</strong> configuration for secure Nginx traffic.</li>
-                            <li>Automated volume mapping for MariaDB data persistence.</li>
-                            <li>Multi-stage service orchestration ensuring correct dependency loading.</li>
-                        </ul>
-                    </div>
-                </div>
+				<div class="space-y-4 text-gray-300 text-sm leading-relaxed">
+					<p><strong>The Challenge:</strong> Virtualizing a complete, secure infrastructure stack using
+						isolated containers under strict 42 network constraints.</p>
+					<p><strong>The Solution:</strong> Orchestrated an environment using <strong>Docker Compose</strong>
+						featuring Nginx, WordPress, and MariaDB. Configured custom Dockerfiles, managed persistent
+						volumes, and established secure inner-container networking.</p>
+					<div class="bg-black/20 p-4 rounded-xl border border-white/5">
+						<p class="font-bold text-primary mb-2 text-xs uppercase tracking-wider">Technical Proof:</p>
+						<ul class="list-disc list-inside space-y-1 text-xs">
+							<li>Implemented <strong>TLS/SSL</strong> configuration for secure Nginx traffic.</li>
+							<li>Automated volume mapping for MariaDB data persistence.</li>
+							<li>Multi-stage service orchestration ensuring correct dependency loading.</li>
+						</ul>
+					</div>
+				</div>
 
-                <div class="pt-2 flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-[10px] font-bold text-blue-300 uppercase">Docker</span>
-                    <span class="px-3 py-1 bg-gray-900/30 border border-gray-500/30 rounded-full text-[10px] font-bold text-gray-300 uppercase">DevOps</span>
-                    <span class="px-3 py-1 bg-green-900/30 border border-green-500/30 rounded-full text-[10px] font-bold text-green-300 uppercase">Nginx/SQL</span>
-                </div>
-				<a href="https://github.com/Marouanelaamiri/Inception" target="_blank"
-					class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View Documentation ▹</a>
-            </div>
-        </div>
+				<div class="pt-2 flex flex-wrap gap-2">
+					<span
+						class="px-3 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-[10px] font-bold text-blue-300 uppercase">Docker</span>
+					<span
+						class="px-3 py-1 bg-gray-900/30 border border-gray-500/30 rounded-full text-[10px] font-bold text-gray-300 uppercase">DevOps</span>
+					<span
+						class="px-3 py-1 bg-green-900/30 border border-green-500/30 rounded-full text-[10px] font-bold text-green-300 uppercase">Nginx/SQL</span>
+				</div>
+				<a href="https://github.com/Marouanelaamiri/Inception/blob/main/README.md" target="_blank" rel="noreferrer noopener"
+					class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View
+					Documentation ▹</a>
+			</div>
+		</div>
 
-        <!-- NEW: TRANSCENDENT PROJECT -->
-        <div
-            class="project-card flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/90 p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition duration-500 mb-16 group">
-            <div class="flex-1 space-y-6 order-2 md:order-1">
-                <h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Transcendent: Full-Stack Web Platform</h3>
+		<!-- NEW: TRANSCENDENT PROJECT -->
+		<div
+			class="flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition-all duration-500 mb-16 group" style="content-visibility:auto; contain-intrinsic-size: 1px 520px;">
+			<div class="flex-1 space-y-6 order-2 md:order-1">
+				<h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Transcendent:
+					Full-Stack Web Platform</h3>
 
-                <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
-                    <p><strong>The Challenge:</strong> Developing a high-performance, real-time web application featuring secure authentication, live data updates, and a seamless user experience.</p>
-                    <p><strong>The Solution:</strong> Built a comprehensive full-stack platform integrating modern frontend frameworks with robust backend logic to handle real-time WebSockets and database management.</p>
-                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
-                        <p class="font-bold text-primary mb-2 text-xs uppercase tracking-wider">Technical Proof:</p>
-                        <ul class="list-disc list-inside space-y-1 text-xs">
-                            <li>Architected <strong>Real-time Communication</strong> pipelines.</li>
-                            <li>Implemented robust User Authentication and Session Management.</li>
-                            <li>Designed a dynamic, responsive Single Page Application (SPA) interface.</li>
-                        </ul>
-                    </div>
-                </div>
+				<div class="space-y-4 text-gray-300 text-sm leading-relaxed">
+					<p><strong>The Challenge:</strong> Developing a high-performance, real-time web application
+						featuring secure authentication, live data updates, and a seamless user experience.</p>
+					<p><strong>The Solution:</strong> Built a comprehensive full-stack platform integrating modern
+						frontend frameworks with robust backend logic to handle real-time WebSockets and database
+						management.</p>
+					<div class="bg-black/20 p-4 rounded-xl border border-white/5">
+						<p class="font-bold text-primary mb-2 text-xs uppercase tracking-wider">Technical Proof:</p>
+						<ul class="list-disc list-inside space-y-1 text-xs">
+							<li>Architected <strong>Real-time Communication</strong> pipelines.</li>
+							<li>Implemented robust User Authentication and Session Management.</li>
+							<li>Designed a dynamic, responsive Single Page Application (SPA) interface.</li>
+						</ul>
+					</div>
+				</div>
 
-                <div class="pt-2 flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-pink-900/30 border border-pink-500/30 rounded-full text-[10px] font-bold text-pink-300 uppercase">Full-Stack</span>
-                    <span class="px-3 py-1 bg-yellow-900/30 border border-yellow-500/30 rounded-full text-[10px] font-bold text-yellow-300 uppercase">TypeScript/JS</span>
-                    <span class="px-3 py-1 bg-indigo-900/30 border border-indigo-500/30 rounded-full text-[10px] font-bold text-indigo-300 uppercase">WebSockets</span>
-                </div>
-            </div>
-            <div class="flex-1 order-1 md:order-2">
-                <img src="assets/bat-man.gif"
-                    alt="Transcendent Web Platform" width="512" height="512" loading="lazy" decoding="async"
-                    class="project-media w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
-            </div>
-        </div>
+				<div class="pt-2 flex flex-wrap gap-2">
+					<span
+						class="px-3 py-1 bg-pink-900/30 border border-pink-500/30 rounded-full text-[10px] font-bold text-pink-300 uppercase">Full-Stack</span>
+					<span
+						class="px-3 py-1 bg-yellow-900/30 border border-yellow-500/30 rounded-full text-[10px] font-bold text-yellow-300 uppercase">TypeScript/JS</span>
+					<span
+						class="px-3 py-1 bg-indigo-900/30 border border-indigo-500/30 rounded-full text-[10px] font-bold text-indigo-300 uppercase">WebSockets</span>
+				</div>
+			</div>
+			<div class="flex-1 order-1 md:order-2">
+				<!-- Using direct Tenor Media link extracted from your request -->
+				<img src="assests/bat-man.gif" loading="lazy" decoding="async" alt="Transcendent Web Platform"
+					class="w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
+			</div>
+		</div>
 
-        <!-- ORIGINAL PROJECTS PRESERVED BELOW -->
+		<!-- ORIGINAL PROJECTS PRESERVED BELOW -->
 
-        <div
-            class="project-card flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/90 p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition duration-500 mb-16 group">
-            <div class="flex-1 order-1">
-                <img src="assets/minishell.png"
-                    alt="Minishell Architecture" width="1000" height="564" loading="lazy" decoding="async"
-                    class="project-media w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="flex-1 space-y-6 order-2">
-                <h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Minishell: System
-                    Architecture</h3>
+		<div
+			class="flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition-all duration-500 mb-16 group" style="content-visibility:auto; contain-intrinsic-size: 1px 520px;">
+			<div class="flex-1 order-1">
+				<img src="assests/minishell.png" loading="lazy" decoding="async"
+					alt="Minishell Architecture"
+					class="w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
+			</div>
+			<div class="flex-1 space-y-6 order-2">
+				<h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Minishell: System
+					Architecture</h3>
 
-                <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
-                    <p><strong>The Challenge:</strong> Developing a fully functional POSIX-compliant shell from scratch,
-                        requiring complex kernel-level integration and process synchronization.</p>
-                    <p><strong>The Solution:</strong> Engineered a custom Lexer and Parser in <strong>C</strong> to
-                        manage command execution pipelines. Implemented precise process management using file
-                        descriptors and environment variable tracking.</p>
-                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
-                        <p class="font-bold text-primary mb-2 text-xs uppercase tracking-wider">Technical Proof:</p>
-                        <ul class="list-disc list-inside space-y-1 text-xs">
-                            <li>Orchestrated <strong>Process Forking</strong> and seamless Redirections.</li>
-                            <li>Implemented robust <strong>Signal Handling</strong> to prevent system hangs.</li>
-                            <li>Maintained 0% memory leakage under recursive testing conditions.</li>
-                        </ul>
-                    </div>
-                </div>
+				<div class="space-y-4 text-gray-300 text-sm leading-relaxed">
+					<p><strong>The Challenge:</strong> Developing a fully functional POSIX-compliant shell from scratch,
+						requiring complex kernel-level integration and process synchronization.</p>
+					<p><strong>The Solution:</strong> Engineered a custom Lexer and Parser in <strong>C</strong> to
+						manage command execution pipelines. Implemented precise process management using file
+						descriptors and environment variable tracking.</p>
+					<div class="bg-black/20 p-4 rounded-xl border border-white/5">
+						<p class="font-bold text-primary mb-2 text-xs uppercase tracking-wider">Technical Proof:</p>
+						<ul class="list-disc list-inside space-y-1 text-xs">
+							<li>Orchestrated <strong>Process Forking</strong> and seamless Redirections.</li>
+							<li>Implemented robust <strong>Signal Handling</strong> to prevent system hangs.</li>
+							<li>Maintained 0% memory leakage under recursive testing conditions.</li>
+						</ul>
+					</div>
+				</div>
 
-                <div class="pt-2 flex flex-wrap gap-2">
-                    <span
-                        class="px-3 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-[10px] font-bold text-blue-300 uppercase">Systems</span>
-                    <span
-                        class="px-3 py-1 bg-red-900/30 border border-red-500/30 rounded-full text-[10px] font-bold text-red-300 uppercase">Unix
-                        API</span>
-                    <span
-                        class="px-3 py-1 bg-green-900/30 border border-green-500/30 rounded-full text-[10px] font-bold text-green-300 uppercase">Logic</span>
-                </div>
+				<div class="pt-2 flex flex-wrap gap-2">
+					<span
+						class="px-3 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-[10px] font-bold text-blue-300 uppercase">Systems</span>
+					<span
+						class="px-3 py-1 bg-red-900/30 border border-red-500/30 rounded-full text-[10px] font-bold text-red-300 uppercase">Unix
+						API</span>
+					<span
+						class="px-3 py-1 bg-green-900/30 border border-green-500/30 rounded-full text-[10px] font-bold text-green-300 uppercase">Logic</span>
+				</div>
 
-                <a href="https://github.com/Marouanelaamiri/minishell" target="_blank"
-                    class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View Documentation ▹</a>
-            </div>
-        </div>
+				<a href="https://github.com/Marouanelaamiri/minishell" target="_blank"
+					class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View
+					Documentation ▹</a>
+			</div>
+		</div>
 
-        <div
-            class="project-card flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/90 p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition duration-500 mb-16 group">
-            <div class="flex-1 space-y-6 order-2 md:order-1">
-                <h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Philosophers:
-                    Concurrency</h3>
+		<div
+			class="flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition-all duration-500 mb-16 group" style="content-visibility:auto; contain-intrinsic-size: 1px 520px;">
+			<div class="flex-1 space-y-6 order-2 md:order-1">
+				<h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Philosophers:
+					Concurrency</h3>
 
-                <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
-                    <p><strong>The Challenge:</strong> Solving the synchronization bottleneck where multiple threads
-                        compete for shared resources, leading to deadlocks or data races.</p>
-                    <p><strong>The Solution:</strong> Applied <strong>Thread Synchronization</strong> using Mutexes and
-                        precise timing logic. Built a monitoring system to ensure resource stability without freezing
-                        the CPU.</p>
-                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
-                        <p class="font-bold text-primary mb-2 text-xs uppercase tracking-wider">Technical Proof:</p>
-                        <ul class="list-disc list-inside space-y-1 text-xs">
-                            <li>Eliminated <strong>Data Races</strong> through strict resource protection logic.</li>
-                            <li>Engineered millisecond-accurate monitoring for thread vitality.</li>
-                            <li>Optimized shared memory access to ensure 100% deadlock prevention.</li>
-                        </ul>
-                    </div>
-                </div>
+				<div class="space-y-4 text-gray-300 text-sm leading-relaxed">
+					<p><strong>The Challenge:</strong> Solving the synchronization bottleneck where multiple threads
+						compete for shared resources, leading to deadlocks or data races.</p>
+					<p><strong>The Solution:</strong> Applied <strong>Thread Synchronization</strong> using Mutexes and
+						precise timing logic. Built a monitoring system to ensure resource stability without freezing
+						the CPU.</p>
+					<div class="bg-black/20 p-4 rounded-xl border border-white/5">
+						<p class="font-bold text-primary mb-2 text-xs uppercase tracking-wider">Technical Proof:</p>
+						<ul class="list-disc list-inside space-y-1 text-xs">
+							<li>Eliminated <strong>Data Races</strong> through strict resource protection logic.</li>
+							<li>Engineered millisecond-accurate monitoring for thread vitality.</li>
+							<li>Optimized shared memory access to ensure 100% deadlock prevention.</li>
+						</ul>
+					</div>
+				</div>
 
-                <div class="pt-2 flex flex-wrap gap-2">
-                    <span
-                        class="px-3 py-1 bg-indigo-900/30 border border-indigo-500/30 rounded-full text-[10px] font-bold text-indigo-300 uppercase">Multi-threading</span>
-                    <span
-                        class="px-3 py-1 bg-pink-900/30 border border-pink-500/30 rounded-full text-[10px] font-bold text-pink-300 uppercase">Concurrency</span>
-                    <span
-                        class="px-3 py-1 bg-yellow-900/30 border border-yellow-500/30 rounded-full text-[10px] font-bold text-yellow-300 uppercase">C
-                        Logic</span>
-                </div>
+				<div class="pt-2 flex flex-wrap gap-2">
+					<span
+						class="px-3 py-1 bg-indigo-900/30 border border-indigo-500/30 rounded-full text-[10px] font-bold text-indigo-300 uppercase">Multi-threading</span>
+					<span
+						class="px-3 py-1 bg-pink-900/30 border border-pink-500/30 rounded-full text-[10px] font-bold text-pink-300 uppercase">Concurrency</span>
+					<span
+						class="px-3 py-1 bg-yellow-900/30 border border-yellow-500/30 rounded-full text-[10px] font-bold text-yellow-300 uppercase">C
+						Logic</span>
+				</div>
 
-                <a href="https://github.com/Marouanelaamiri/Philo" target="_blank"
-                    class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View Documentation ▹</a>
-            </div>
-            <div class="flex-1 order-1 md:order-2">
-                <img src="assets/philo.gif"
-                    alt="Concurrent Computing Study" width="640" height="360" loading="lazy" decoding="async"
-                    class="project-media w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
-            </div>
-        </div>
+				<a href="https://github.com/Marouanelaamiri/Philo" target="_blank"
+					class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View
+					Documentation ▹</a>
+			</div>
+			<div class="flex-1 order-1 md:order-2">
+				<img src="assests/philo.gif" loading="lazy" decoding="async"
+					alt="Concurrent Computing Study"
+					class="w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
+			</div>
+		</div>
 
-        <div
-            class="project-card flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/90 p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition duration-500 mb-16 group">
-            <div class="flex-1 order-1">
-                <img src="assets/cub3d.gif"
-                    alt="Graphics Engine Study" width="640" height="360" loading="lazy" decoding="async"
-                    class="project-media w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="flex-1 space-y-6 order-2">
-                <h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Cub3D: Graphics
-                    Engine</h3>
+		<div
+			class="flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition-all duration-500 mb-16 group">
+			<div class="flex-1 order-1">
+				<img src="assests/cub3d.gif" loading="lazy" decoding="async"
+					alt="Graphics Engine Study"
+					class="w-full rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 transform group-hover:scale-105 transition-transform duration-500">
+			</div>
+			<div class="flex-1 space-y-6 order-2">
+				<h3 class="text-3xl font-bold text-white group-hover:text-primary transition-colors">Cub3D: Graphics
+					Engine</h3>
 
-                <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
-                    <p><strong>The Challenge:</strong> Generating a real-time 3D perspective without the aid of modern
-                        GPUs or high-level gaming frameworks.</p>
-                    <p><strong>The Solution:</strong> Built a custom <strong>Raycasting Engine</strong>. Manually
-                        calculated trigonometry and Euclidean geometry to render textured environments at high refresh
-                        rates.</p>
-                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
-                        <p class="font-bold text-primary mb-2 text-xs uppercase tracking-wider">Technical Proof:</p>
-                        <ul class="list-disc list-inside space-y-1 text-xs">
-                            <li>Optimized algorithms for **consistent 60FPS performance**.</li>
-                            <li>Developed custom parsing for map stability and error handling.</li>
-                            <li>Implemented texture mapping and collision detection at the pixel level.</li>
-                        </ul>
-                    </div>
-                </div>
+				<div class="space-y-4 text-gray-300 text-sm leading-relaxed">
+					<p><strong>The Challenge:</strong> Generating a real-time 3D perspective without the aid of modern
+						GPUs or high-level gaming frameworks.</p>
+					<p><strong>The Solution:</strong> Built a custom <strong>Raycasting Engine</strong>. Manually
+						calculated trigonometry and Euclidean geometry to render textured environments at high refresh
+						rates.</p>
+					<div class="bg-black/20 p-4 rounded-xl border border-white/5">
+						<p class="font-bold text-primary mb-2 text-xs uppercase tracking-wider">Technical Proof:</p>
+						<ul class="list-disc list-inside space-y-1 text-xs">
+							<li>Optimized algorithms for **consistent 60FPS performance**.</li>
+							<li>Developed custom parsing for map stability and error handling.</li>
+							<li>Implemented texture mapping and collision detection at the pixel level.</li>
+						</ul>
+					</div>
+				</div>
 
-                <div class="pt-2 flex flex-wrap gap-2">
-                    <span
-                        class="px-3 py-1 bg-purple-900/30 border border-purple-500/30 rounded-full text-[10px] font-bold text-purple-300 uppercase">Graphics</span>
-                    <span
-                        class="px-3 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-[10px] font-bold text-blue-300 uppercase">Mathematics</span>
-                    <span
-                        class="px-3 py-1 bg-gray-900/30 border border-gray-500/30 rounded-full text-[10px] font-bold text-gray-300 uppercase">Optimization</span>
-                </div>
+				<div class="pt-2 flex flex-wrap gap-2">
+					<span
+						class="px-3 py-1 bg-purple-900/30 border border-purple-500/30 rounded-full text-[10px] font-bold text-purple-300 uppercase">Graphics</span>
+					<span
+						class="px-3 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-[10px] font-bold text-blue-300 uppercase">Mathematics</span>
+					<span
+						class="px-3 py-1 bg-gray-900/30 border border-gray-500/30 rounded-full text-[10px] font-bold text-gray-300 uppercase">Optimization</span>
+				</div>
 
-                <a href="https://github.com/Marouanelaamiri/cub3D" target="_blank"
-                    class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View Documentation ▹</a>
-            </div>
-        </div>
+				<a href="https://github.com/Marouanelaamiri/cub3D" target="_blank"
+					class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View
+					Documentation ▹</a>
+			</div>
+		</div>
 
-    </main>
+	</main>
 
 </body>
 

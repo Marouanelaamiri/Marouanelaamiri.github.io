@@ -28,11 +28,11 @@ body {
 	background-color: var(--bg-dark);
 	padding-top: 80px;
 	line-height: 1.6;
-	background-image: url('background.jpg');
+	background-image: url('assests/background.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-attachment: scroll;
 }
 
 body::before {
