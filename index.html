@@ -68,18 +68,19 @@
             animation: blink 1s infinite;
         }
 
-        .logo-marquee { display: flex; width: max-content; animation: logo-marquee 25s linear infinite; }
+        .technology-strip { overflow: hidden; width: 100%; }
+        .logo-marquee { display: flex; width: max-content; animation: logo-marquee 25s linear infinite; will-change: transform; }
         .logo-marquee__group { display: flex; flex: none; align-items: center; gap: 4rem; padding-right: 4rem; }
-        .logo-marquee__group i:nth-of-type(10n + 1) { color: #facc15 !important; } /* Python */
-        .logo-marquee__group i:nth-of-type(10n + 2) { color: #3b82f6 !important; } /* C */
-        .logo-marquee__group i:nth-of-type(10n + 3) { color: #38bdf8 !important; } /* Docker */
-        .logo-marquee__group i:nth-of-type(10n + 4) { color: #f8fafc !important; } /* Linux */
-        .logo-marquee__group i:nth-of-type(10n + 5) { color: #ef4444 !important; } /* Git */
-        .logo-marquee__group i:nth-of-type(10n + 6) { color: #4ade80 !important; } /* Terminal */
-        .logo-marquee__group i:nth-of-type(10n + 7) { color: #fb923c !important; } /* AWS */
-        .logo-marquee__group i:nth-of-type(10n + 8) { color: #60a5fa !important; } /* React */
-        .logo-marquee__group i:nth-of-type(10n + 9) { color: #facc15 !important; } /* JavaScript */
-        .logo-marquee__group i:nth-of-type(10n) { color: #cbd5e1 !important; } /* SQL */
+        .tech-logo { font-size: 3rem; line-height: 1; }
+        .tech-logo--python, .tech-logo--javascript { color: #facc15; }
+        .tech-logo--c { color: #3b82f6; }
+        .tech-logo--docker { color: #38bdf8; }
+        .tech-logo--linux { color: #f8fafc; }
+        .tech-logo--git { color: #ef4444; }
+        .tech-logo--terminal { color: #4ade80; }
+        .tech-logo--aws { color: #fb923c; }
+        .tech-logo--react { color: #60a5fa; }
+        .tech-logo--database { color: #cbd5e1; }
 
         @keyframes logo-marquee {
             to { transform: translateX(-50%); }
@@ -119,7 +120,7 @@
                 <li><a href="index.html" class="hover:text-primary transition-colors" data-i18n="home">Home</a></li>
                 <li><a href="about.html" class="hover:text-primary transition-colors" data-i18n="about">About</a></li>
                 <li><a href="projects.html" class="hover:text-primary transition-colors" data-i18n="projects">Projects</a></li>
-                <li><select aria-label="Select language" class="language-select bg-transparent text-primary font-bold outline-none cursor-pointer"><option value="en">EN</option><option value="fr">FR</option><option value="ar">ع</option></select></li>
+                <li><select aria-label="Select language" class="language-select bg-transparent text-primary font-bold outline-none cursor-pointer"><option value="en">EN</option><option value="fr">FR</option><option value="ar">arb</option></select></li>
             </ul>
         </div>
     </nav>
@@ -164,35 +165,35 @@
 
         <section class="mb-24 overflow-hidden relative">
             <h2 class="text-center text-xs uppercase tracking-[0.3em] font-bold mb-10 text-gray-500" data-i18n="tech">Technology Ecosystem</h2>
-            <div class="relative flex overflow-x-hidden">
-                <div class="logo-marquee opacity-90">
+            <div class="technology-strip">
+                <div class="logo-marquee">
                     <div class="logo-marquee__group">
                     <!-- Original Icons -->
-                    <i class="fab fa-python text-5xl text-yellow-400" title="Python"></i>
-                    <i class="fas fa-c text-5xl text-blue-500" title="C Language"></i>
-                    <i class="fab fa-docker text-5xl text-blue-400" title="Docker"></i>
-                    <i class="fab fa-linux text-5xl text-white" title="Linux"></i>
-                    <i class="fab fa-git-alt text-5xl text-red-500" title="Git"></i>
-                    <i class="fas fa-terminal text-5xl text-green-400" title="Bash"></i>
-                    <i class="fab fa-aws text-5xl text-orange-400" title="AWS"></i>
+                    <i class="fab fa-python tech-logo tech-logo--python" title="Python"></i>
+                    <i class="fas fa-c tech-logo tech-logo--c" title="C Language"></i>
+                    <i class="fab fa-docker tech-logo tech-logo--docker" title="Docker"></i>
+                    <i class="fab fa-linux tech-logo tech-logo--linux" title="Linux"></i>
+                    <i class="fab fa-git-alt tech-logo tech-logo--git" title="Git"></i>
+                    <i class="fas fa-terminal tech-logo tech-logo--terminal" title="Bash"></i>
+                    <i class="fab fa-aws tech-logo tech-logo--aws" title="AWS"></i>
                     <!-- NEW SKILLS ADDED -->
-                    <i class="fab fa-react text-5xl text-blue-400" title="React"></i>
-                    <i class="fab fa-js text-5xl text-yellow-300" title="TypeScript/JS"></i>
-                    <i class="fas fa-database text-5xl text-gray-300" title="SQL/MariaDB"></i>
+                    <i class="fab fa-react tech-logo tech-logo--react" title="React"></i>
+                    <i class="fab fa-js tech-logo tech-logo--javascript" title="TypeScript/JS"></i>
+                    <i class="fas fa-database tech-logo tech-logo--database" title="SQL/MariaDB"></i>
                     </div>
 
                     <!-- Repeated for continuous loop -->
                     <div class="logo-marquee__group" aria-hidden="true">
-                    <i class="fab fa-python text-5xl text-yellow-400"></i>
-                    <i class="fas fa-c text-5xl text-blue-500"></i>
-                    <i class="fab fa-docker text-5xl text-blue-400"></i>
-                    <i class="fab fa-linux text-5xl text-white"></i>
-                    <i class="fab fa-git-alt text-5xl text-red-500"></i>
-                    <i class="fas fa-terminal text-5xl text-green-400"></i>
-                    <i class="fab fa-aws text-5xl text-orange-400"></i>
-                    <i class="fab fa-react text-5xl text-blue-400"></i>
-                    <i class="fab fa-js text-5xl text-yellow-300"></i>
-                    <i class="fas fa-database text-5xl text-gray-300"></i>
+                    <i class="fab fa-python tech-logo tech-logo--python"></i>
+                    <i class="fas fa-c tech-logo tech-logo--c"></i>
+                    <i class="fab fa-docker tech-logo tech-logo--docker"></i>
+                    <i class="fab fa-linux tech-logo tech-logo--linux"></i>
+                    <i class="fab fa-git-alt tech-logo tech-logo--git"></i>
+                    <i class="fas fa-terminal tech-logo tech-logo--terminal"></i>
+                    <i class="fab fa-aws tech-logo tech-logo--aws"></i>
+                    <i class="fab fa-react tech-logo tech-logo--react"></i>
+                    <i class="fab fa-js tech-logo tech-logo--javascript"></i>
+                    <i class="fas fa-database tech-logo tech-logo--database"></i>
                     </div>
                 </div>
             </div>
