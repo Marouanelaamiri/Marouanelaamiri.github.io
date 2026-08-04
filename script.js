@@ -1,54 +1,108 @@
-const typedText = document.querySelector("#typed-text");
-const year = document.querySelector("#year");
-const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
-const sections = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
-  .filter(Boolean);
+(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const phrases = [
-  "automate workflows",
-  "stabilize systems",
-  "simplify complexity",
-  "visualize data",
-  "build reliability",
-];
+    const activateCurrentNavLink = () => {
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('nav a[href]');
 
-let phraseIndex = 0;
-let charIndex = 0;
-let deleting = false;
+        navLinks.forEach((link) => {
+            const linkPath = link.getAttribute('href')?.split('/').pop();
+            const isActive = linkPath === currentPath || (!currentPath && linkPath === 'index.html');
 
-function typePhrase() {
-  const phrase = phrases[phraseIndex];
-  typedText.textContent = phrase.slice(0, charIndex);
+            if (isActive) {
+                link.classList.add('text-primary', 'font-semibold');
+                link.setAttribute('aria-current', 'page');
+            }
+        });
+    };
 
-  if (!deleting && charIndex < phrase.length) {
-    charIndex += 1;
-  } else if (deleting && charIndex > 0) {
-    charIndex -= 1;
-  } else if (!deleting) {
-    deleting = true;
-    setTimeout(typePhrase, 1300);
-    return;
-  } else {
-    deleting = false;
-    phraseIndex = (phraseIndex + 1) % phrases.length;
-  }
+    const revealSections = () => {
+        const revealTargets = document.querySelectorAll('main > *');
 
-  setTimeout(typePhrase, deleting ? 45 : 85);
-}
+        if (!revealTargets.length) {
+            return;
+        }
 
-function setActiveNav() {
-  const current = sections.reduce((active, section) => {
-    const top = section.getBoundingClientRect().top;
-    return top <= 120 ? section.id : active;
-  }, "home");
+        revealTargets.forEach((element) => element.classList.add('reveal'));
 
-  navLinks.forEach((link) => {
-    link.classList.toggle("is-active", link.getAttribute("href") === `#${current}`);
-  });
-}
+        if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+            revealTargets.forEach((element) => element.classList.add('is-visible'));
+            return;
+        }
 
-year.textContent = new Date().getFullYear();
-typePhrase();
-setActiveNav();
-window.addEventListener("scroll", setActiveNav, { passive: true });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.18,
+            rootMargin: '0px 0px -6% 0px',
+        });
+
+        revealTargets.forEach((element) => observer.observe(element));
+    };
+
+    const startTypewriter = () => {
+        const textElement = document.getElementById('typewriter');
+
+        if (!textElement) {
+            return;
+        }
+
+        const phrases = [
+            'automate workflows',
+            'stabilize systems',
+            'simplify complexity',
+            'visualize data',
+            'build reliability',
+        ];
+
+        if (prefersReducedMotion) {
+            textElement.textContent = phrases[0];
+            return;
+        }
+
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let timeoutId;
+
+        const tick = () => {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                charIndex -= 1;
+                textElement.textContent = currentPhrase.slice(0, charIndex);
+            } else {
+                charIndex += 1;
+                textElement.textContent = currentPhrase.slice(0, charIndex);
+            }
+
+            let delay = isDeleting ? 54 : 92;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                delay = 1500;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                delay = 350;
+            }
+
+            timeoutId = window.setTimeout(tick, delay);
+        };
+
+        tick();
+
+        window.addEventListener('pagehide', () => window.clearTimeout(timeoutId), { once: true });
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        activateCurrentNavLink();
+        revealSections();
+        startTypewriter();
+    });
+})();
