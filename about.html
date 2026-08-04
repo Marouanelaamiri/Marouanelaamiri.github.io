@@ -10,17 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        dark: '#071a33',
-                        primary: '#2f80ed',
-                        secondary: '#d9ecff',
-                        nav: '#08234a',
+                        dark: '#0c001f',
+                        primary: '#6c42d3',
+                        secondary: '#b0a8d1',
+                        nav: '#1a013d',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -30,6 +29,11 @@
             }
         }
     </script>
+    <style>
+        body {
+            background-color: #0c001f;
+        }
+    </style>
 </head>
 
 <body class="text-white antialiased min-h-screen flex flex-col relative">
@@ -53,8 +57,8 @@
 
         <div class="bg-nav/60 backdrop-blur-md rounded-3xl border border-primary/30 shadow-2xl overflow-hidden">
 
-            <div class="bg-gradient-to-r from-primary to-slate-900 p-6 text-center relative overflow-hidden">
-                <h2 class="text-2xl md:text-3xl font-semibold tracking-[0.35em] uppercase text-white relative z-10 text-glow">PLAYER PROFILE</h2>
+            <div class="bg-gradient-to-r from-primary to-purple-800 p-6 text-center relative overflow-hidden">
+                <h2 class="text-2xl md:text-3xl font-pixel text-white drop-shadow-md relative z-10">PLAYER PROFILE</h2>
             </div>
 
             <div class="p-8 md:p-12 grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -64,12 +68,13 @@
                     <div class="relative mx-auto w-48 h-48 group">
                         <div class="absolute inset-0 bg-primary rounded-full blur opacity-50 group-hover:opacity-80 transition duration-500"></div>
                         <div class="relative w-full h-full rounded-full border-4 border-white object-cover shadow-xl bg-white/5 flex items-center justify-center text-center text-[10px] uppercase tracking-[0.2em] text-gray-300 px-4">
-                            <img src="assests/avatar.png" alt="Marouane Laamiri" class="w-full h-full object-cover rounded-full">
+                            <!-- Add your avatar path here: assests/avatar.png -->
+                            Avatar Placeholder
                         </div>
-                        <div class="absolute bottom-2 right-2 bg-sky-400 w-6 h-6 rounded-full border-2 border-white" title="Online"></div>
+                        <div class="absolute bottom-2 right-2 bg-green-500 w-6 h-6 rounded-full border-2 border-white" title="Online"></div>
                     </div>
 
-                    <div class="text-center space-y-2 glass-panel p-4 rounded-xl">
+                    <div class="text-center space-y-2 bg-black/30 p-4 rounded-xl border border-white/10">
                         <h3 class="text-xl font-bold">Marouane Laamiri</h3>
                         <p class="text-primary text-sm font-mono">Class: 1337 Student</p>
                         <p class="text-secondary text-sm font-mono">Level: 11.77</p>
@@ -85,7 +90,7 @@
                                 <span class="text-primary">99.9%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2">
-                                <div class="bg-sky-400 h-2 rounded-full" style="width: 99.9%"></div>
+                                <div class="bg-yellow-500 h-2 rounded-full" style="width: 99.9%"></div>
                             </div>
                         </div>
 
@@ -95,7 +100,7 @@
                                 <span class="text-primary">6666,42</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2">
-                                <div class="bg-blue-400 h-2 rounded-full" style="width: 90.5%"></div>
+                                <div class="bg-red-500 h-2 rounded-full" style="width: 90.5%"></div>
                             </div>
                         </div>
 
@@ -117,7 +122,7 @@
                         <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
                             <span class="text-2xl">📜</span> Biography
                         </h3>
-                        <div class="glass-panel p-6 rounded-xl text-gray-300 leading-relaxed space-y-4">
+                        <div class="bg-black/20 p-6 rounded-xl border border-white/5 text-gray-300 leading-relaxed space-y-4">
                             <p>
                                 <span class="text-primary font-bold">Game Start:</span> My journey began as an IT Technician at <strong class="text-white">Kharkov National University</strong>, mastering hardware maintenance and network troubleshooting.
                             </p>
@@ -135,27 +140,27 @@
                             <span class="text-2xl">⚡</span> Skill Tree
                         </h3>
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                            <div class="bg-primary/10 border border-primary/20 p-3 rounded-lg text-center hover:bg-primary/20 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
                                 <span class="block text-xl mb-1">🐳</span>
                                 <span class="font-bold text-sm">Docker</span>
                             </div>
-                            <div class="bg-primary/10 border border-primary/20 p-3 rounded-lg text-center hover:bg-primary/20 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
                                 <span class="block text-xl mb-1">⚙️</span>
                                 <span class="font-bold text-sm">C++ (98/11)</span>
                             </div>
-                            <div class="bg-primary/10 border border-primary/20 p-3 rounded-lg text-center hover:bg-primary/20 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
                                 <span class="block text-xl mb-1">🚀</span>
                                 <span class="font-bold text-sm">TypeScript</span>
                             </div>
-                            <div class="bg-primary/10 border border-primary/20 p-3 rounded-lg text-center hover:bg-primary/20 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
                                 <span class="block text-xl mb-1">🐧</span>
                                 <span class="font-bold text-sm">Linux/Unix</span>
                             </div>
-                            <div class="bg-primary/10 border border-primary/20 p-3 rounded-lg text-center hover:bg-primary/20 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
                                 <span class="block text-xl mb-1">🗄️</span>
                                 <span class="font-bold text-sm">MariaDB/SQL</span>
                             </div>
-                            <div class="bg-primary/10 border border-primary/20 p-3 rounded-lg text-center hover:bg-primary/20 transition">
+                            <div class="bg-primary/10 border border-primary/30 p-3 rounded-lg text-center hover:bg-primary/30 transition">
                                 <span class="block text-xl mb-1">🎨</span>
                                 <span class="font-bold text-sm">React/Web</span>
                             </div>
@@ -166,12 +171,12 @@
                     <div class="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=laamirimarouane8@gmail.com" 
                            target="_blank" 
-                           class="bg-primary hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-bold transition transform hover:-translate-y-1 shadow-lg shadow-primary/30 flex items-center gap-2">
+                           class="bg-primary hover:bg-purple-600 text-white px-8 py-3 rounded-xl font-bold transition transform hover:-translate-y-1 shadow-lg shadow-primary/30 flex items-center gap-2">
                             Let's Work Together
                         </a>
                                 <a href="assests/Marouane_Laamiri_Resume.pdf"
                                     target="_blank" rel="noreferrer noopener"
-                           class="border border-secondary/60 hover:bg-white/10 text-secondary px-8 py-3 rounded-xl font-bold transition transform hover:-translate-y-1">
+                           class="border border-secondary/50 hover:bg-secondary/10 text-secondary px-8 py-3 rounded-xl font-bold transition transform hover:-translate-y-1">
                             Download Resume
                         </a>
                     </div>
@@ -182,6 +187,5 @@
         </div>
     </main>
 
-    <script src="script.js" defer></script>
 </body>
 </html>
