@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <meta property="og:title" content="Marouane Laamiri | Software Engineer & Automation Specialist">
+    <meta property="og:title" content="Marouane Laamiri | AI Software Engineer">
     <meta property="og:description"
         content="I build robust systems and automation tools that solve complex technical problems.">
     <meta property="og:image" content="https://marouanelaamiri.github.io/og-image.jpg">
@@ -13,6 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="i18n.js" defer></script>
 
     <script>
         tailwind.config = {
@@ -67,6 +68,23 @@
             animation: blink 1s infinite;
         }
 
+        .logo-marquee { display: flex; width: max-content; animation: logo-marquee 25s linear infinite; }
+        .logo-marquee__group { display: flex; flex: none; align-items: center; gap: 4rem; padding-right: 4rem; }
+        .logo-marquee__group i:nth-of-type(10n + 1) { color: #facc15 !important; } /* Python */
+        .logo-marquee__group i:nth-of-type(10n + 2) { color: #3b82f6 !important; } /* C */
+        .logo-marquee__group i:nth-of-type(10n + 3) { color: #38bdf8 !important; } /* Docker */
+        .logo-marquee__group i:nth-of-type(10n + 4) { color: #f8fafc !important; } /* Linux */
+        .logo-marquee__group i:nth-of-type(10n + 5) { color: #ef4444 !important; } /* Git */
+        .logo-marquee__group i:nth-of-type(10n + 6) { color: #4ade80 !important; } /* Terminal */
+        .logo-marquee__group i:nth-of-type(10n + 7) { color: #fb923c !important; } /* AWS */
+        .logo-marquee__group i:nth-of-type(10n + 8) { color: #60a5fa !important; } /* React */
+        .logo-marquee__group i:nth-of-type(10n + 9) { color: #facc15 !important; } /* JavaScript */
+        .logo-marquee__group i:nth-of-type(10n) { color: #cbd5e1 !important; } /* SQL */
+
+        @keyframes logo-marquee {
+            to { transform: translateX(-50%); }
+        }
+
         @keyframes blink {
 
             0%,
@@ -98,9 +116,10 @@
                     Laamiri</span>
             </a>
             <ul class="flex gap-4 sm:gap-10 text-sm sm:text-base font-medium text-gray-300">
-                <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
-                <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
-                <li><a href="projects.html" class="hover:text-primary transition-colors">Projects</a></li>
+                <li><a href="index.html" class="hover:text-primary transition-colors" data-i18n="home">Home</a></li>
+                <li><a href="about.html" class="hover:text-primary transition-colors" data-i18n="about">About</a></li>
+                <li><a href="projects.html" class="hover:text-primary transition-colors" data-i18n="projects">Projects</a></li>
+                <li><select aria-label="Select language" class="language-select bg-transparent text-primary font-bold outline-none cursor-pointer"><option value="en">EN</option><option value="fr">FR</option><option value="ar">ع</option></select></li>
             </ul>
         </div>
     </nav>
@@ -119,10 +138,10 @@
 
             <div
                 class="text-center md:text-left space-y-6 md:ml-8 bg-black/40 p-8 rounded-3xl backdrop-blur-sm border border-white/10 w-full shadow-2xl">
-                <h3 class="text-xl text-secondary font-semibold tracking-wide">SOFTWARE ENGINEER & AUTOMATION SPECIALIST
+                <h3 class="text-xl text-secondary font-semibold tracking-wide" data-i18n="role">SOFTWARE ENGINEER & AUTOMATION SPECIALIST
                 </h3>
                 <h1 class="text-3xl md:text-5xl font-bold leading-tight min-h-[60px]">
-                    I <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400"
+                    <span data-i18n="pronoun">I</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400"
                         id="typewriter"></span><span class="cursor">&nbsp;</span>
                 </h1>
                 <p class="text-gray-300 text-base md:text-lg max-w-2xl leading-relaxed">
@@ -133,21 +152,21 @@
                 <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=laamirimarouane8@gmail.com" target="_blank"
                         class="px-8 py-3 bg-primary hover:bg-purple-600 text-white font-bold rounded-xl shadow-lg shadow-primary/30 transform hover:-translate-y-1 transition-all duration-300">
-                        Let's Work Together
+                        <span data-i18n="work">Let's Work Together</span>
                     </a>
                     <a href="assests/Marouane_Laamiri_Resume.pdf" target="_blank"
                         class="px-8 py-3 border border-secondary/50 hover:bg-secondary/10 text-secondary font-bold rounded-xl transition-all duration-300">
-                        View Resume
+                        <span data-i18n="resume">View Resume</span>
                     </a>
                 </div>
             </div>
         </header>
 
         <section class="mb-24 overflow-hidden relative">
-            <h2 class="text-center text-xs uppercase tracking-[0.3em] font-bold mb-10 text-gray-500">Technology
-                Ecosystem</h2>
+            <h2 class="text-center text-xs uppercase tracking-[0.3em] font-bold mb-10 text-gray-500" data-i18n="tech">Technology Ecosystem</h2>
             <div class="relative flex overflow-x-hidden">
-                <div class="animate-marquee whitespace-nowrap flex gap-16 items-center opacity-90">
+                <div class="logo-marquee opacity-90">
+                    <div class="logo-marquee__group">
                     <!-- Original Icons -->
                     <i class="fab fa-python text-5xl text-yellow-400" title="Python"></i>
                     <i class="fas fa-c text-5xl text-blue-500" title="C Language"></i>
@@ -160,8 +179,10 @@
                     <i class="fab fa-react text-5xl text-blue-400" title="React"></i>
                     <i class="fab fa-js text-5xl text-yellow-300" title="TypeScript/JS"></i>
                     <i class="fas fa-database text-5xl text-gray-300" title="SQL/MariaDB"></i>
-                    
+                    </div>
+
                     <!-- Repeated for continuous loop -->
+                    <div class="logo-marquee__group" aria-hidden="true">
                     <i class="fab fa-python text-5xl text-yellow-400"></i>
                     <i class="fas fa-c text-5xl text-blue-500"></i>
                     <i class="fab fa-docker text-5xl text-blue-400"></i>
@@ -172,12 +193,13 @@
                     <i class="fab fa-react text-5xl text-blue-400"></i>
                     <i class="fab fa-js text-5xl text-yellow-300"></i>
                     <i class="fas fa-database text-5xl text-gray-300"></i>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="mb-24">
-            <h2 class="text-3xl font-bold mb-10 text-center md:text-left">Solving Problems with Code</h2>
+            <h2 class="text-3xl font-bold mb-10 text-center md:text-left" data-i18n="problems">Solving Problems with Code</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <div
@@ -186,7 +208,7 @@
                         class="w-14 h-14 bg-primary/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-shield-halved text-2xl text-primary"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">System Stability</h3>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="stability">System Stability</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Developing fault-tolerant concurrent systems in
                         C/C++. My priority is resource optimization and deadlock prevention.</p>
                 </div>
@@ -197,7 +219,7 @@
                         class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-robot text-2xl text-green-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Workflow Automation</h3>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="automation">Workflow Automation</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Architecting Python scripts and custom RPA tools to
                         automate repetitive tasks, reducing human error and time-to-delivery.</p>
                 </div>
@@ -208,7 +230,7 @@
                         class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-chart-line text-2xl text-blue-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Technical Visualization</h3>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="visualization">Technical Visualization</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Translating complex data flows and industrial
                         processes into clear, high-impact visual demonstrators and demonstrators.</p>
                 </div>
@@ -220,7 +242,7 @@
                         class="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-layer-group text-2xl text-purple-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">DevOps & Infrastructure</h3>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="devops">DevOps & Infrastructure</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Virtualizing complete IT environments using Docker and Docker Compose. Managing networks, volumes, and service isolation.</p>
                 </div>
 
@@ -231,7 +253,7 @@
                         class="w-14 h-14 bg-pink-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-globe text-2xl text-pink-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Full-Stack Web</h3>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="fullstack">Full-Stack Web</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Building scalable, real-time web applications with complex interactive logic and responsive UI/UX architecture.</p>
                 </div>
 
@@ -242,7 +264,7 @@
 
             <div class="space-y-8">
                 <div>
-                    <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+                    <h2 class="text-3xl font-bold mb-4" data-i18n="connect">Let's Connect</h2>
                     <p class="text-gray-400 text-sm leading-relaxed">Whether you have a project in mind or just want to
 						say hi, feel free to reach out. I'm always open to discussing new opportunities and collaborations.</p>
                 </div>
@@ -288,13 +310,7 @@
 
     <script>
         const textElement = document.getElementById('typewriter');
-        const phrases = [
-            "automate workflows",
-            "stabilize systems",
-            "simplify complexity",
-            "visualize data",
-            "build reliability"
-        ];
+        let phrases = window.sitePhrases || ['automate workflows', 'stabilize systems', 'simplify complexity', 'visualize data', 'build reliability'];
         let phraseIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -326,6 +342,12 @@
         }
 
         type();
+        document.addEventListener('languagechange', () => {
+            phrases = window.sitePhrases;
+            phraseIndex = 0;
+            charIndex = 0;
+            isDeleting = false;
+        });
     </script>
 
 </body>

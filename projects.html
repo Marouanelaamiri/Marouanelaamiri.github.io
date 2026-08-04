@@ -7,6 +7,7 @@
     <title>Case Studies | Marouane Laamiri</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="i18n.js" defer></script>
 
     <script>
         tailwind.config = {
@@ -53,18 +54,18 @@
                     Laamiri</span>
             </a>
             <ul class="flex gap-4 sm:gap-10 text-sm sm:text-base font-medium text-gray-300">
-                <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
-                <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
-                <li><a href="projects.html" class="hover:text-primary transition-colors">Projects</a></li>
+                <li><a href="index.html" class="hover:text-primary transition-colors" data-i18n="home">Home</a></li>
+                <li><a href="about.html" class="hover:text-primary transition-colors" data-i18n="about">About</a></li>
+                <li><a href="projects.html" class="hover:text-primary transition-colors" data-i18n="projects">Projects</a></li>
+                <li><select aria-label="Select language" class="language-select bg-transparent text-primary font-bold outline-none cursor-pointer"><option value="en">EN</option><option value="fr">FR</option><option value="ar">ع</option></select></li>
             </ul>
         </div>
     </nav>
     <main class="flex-grow container mx-auto px-6 pt-32 pb-20 max-w-6xl">
 
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4">Technical Case Studies</h2>
-            <p class="text-secondary text-lg max-w-2xl mx-auto">Engineering robust, scalable, and stable software
-                solutions through low-level systems programming.</p>
+            <h2 class="text-4xl font-bold mb-4" data-i18n="studies">Technical Case Studies</h2>
+            <p class="text-secondary text-lg max-w-2xl mx-auto" data-i18n="studiesIntro">Engineering robust, scalable, and stable software solutions through low-level systems programming.</p>
         </div>
 
         <!-- NEW: INCEPTION PROJECT -->
@@ -97,7 +98,7 @@
                     <span class="px-3 py-1 bg-green-900/30 border border-green-500/30 rounded-full text-[10px] font-bold text-green-300 uppercase">Nginx/SQL</span>
                 </div>
                 <a href="https://github.com/Marouanelaamiri/Inception" target="_blank"
-                    class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View Documentation ▹</a>
+                    class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors" data-i18n="documentation">View Documentation ▹</a>
             </div>
         </div>
 
@@ -174,7 +175,7 @@
                 </div>
 
                 <a href="https://github.com/Marouanelaamiri/minishell" target="_blank"
-                    class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View Documentation ▹</a>
+                    class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors" data-i18n="documentation">View Documentation ▹</a>
             </div>
         </div>
 
@@ -211,7 +212,7 @@
                 </div>
 
                 <a href="https://github.com/Marouanelaamiri/Philo" target="_blank"
-                    class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View Documentation ▹</a>
+                    class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors" data-i18n="documentation">View Documentation ▹</a>
             </div>
             <div class="flex-1 order-1 md:order-2">
                 <img src="assests/philo.gif"
@@ -257,7 +258,7 @@
                 </div>
 
                 <a href="https://github.com/Marouanelaamiri/cub3D" target="_blank"
-                    class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors">View Documentation ▹</a>
+                    class="inline-block mt-4 text-primary font-bold hover:text-white transition-colors" data-i18n="documentation">View Documentation ▹</a>
             </div>
         </div>
 
