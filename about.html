@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Marouane Laamiri</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
@@ -29,9 +27,20 @@
             }
         }
     </script>
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 
 <body class="text-white antialiased min-h-screen flex flex-col relative">
+
+    <div class="fixed inset-0 bg-black/60 -z-10"></div>
 
     <nav class="fixed w-full top-0 z-50 bg-nav/95 backdrop-blur-md border-b border-primary/30 shadow-lg">
         <div class="w-full px-4 sm:px-8 h-20 flex justify-between items-center">
@@ -51,6 +60,7 @@
         <div class="bg-nav/60 backdrop-blur-md rounded-3xl border border-primary/30 shadow-2xl overflow-hidden">
 
             <div class="bg-gradient-to-r from-primary to-purple-800 p-6 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
                 <h2 class="text-2xl md:text-3xl font-pixel text-white drop-shadow-md relative z-10">PLAYER PROFILE</h2>
             </div>
 
@@ -60,17 +70,14 @@
                 <div class="space-y-8">
                     <div class="relative mx-auto w-48 h-48 group">
                         <div class="absolute inset-0 bg-primary rounded-full blur opacity-50 group-hover:opacity-80 transition duration-500"></div>
-                        <div class="relative w-full h-full rounded-full border-4 border-white object-cover shadow-xl bg-white/5 flex items-center justify-center text-center text-[10px] uppercase tracking-[0.2em] text-gray-300 px-4">
-                            <!-- Add your avatar path here: assests/avatar.png -->
-                            <img src="assests/avatar.png" alt="Marouane Laamiri Avatar" class="w-full h-full object-cover rounded-full">
-                        </div>
+                        <img src="https://raw.githubusercontent.com/Marouanelaamiri/my-portfolio/main/avatar.png" alt="Marouane" class="relative w-full h-full rounded-full border-4 border-white object-cover shadow-xl">
                         <div class="absolute bottom-2 right-2 bg-green-500 w-6 h-6 rounded-full border-2 border-white" title="Online"></div>
                     </div>
 
                     <div class="text-center space-y-2 bg-black/30 p-4 rounded-xl border border-white/10">
                         <h3 class="text-xl font-bold">Marouane Laamiri</h3>
                         <p class="text-primary text-sm font-mono">Class: 1337 Student</p>
-                        <p class="text-secondary text-sm font-mono">Level: 9.99 </p>
+                        <p class="text-secondary text-sm font-mono">Level: 11.77</p>
                         <p class="text-gray-400 text-sm font-mono">Location: Morocco</p>
                     </div>
 
@@ -167,8 +174,8 @@
                            class="bg-primary hover:bg-purple-600 text-white px-8 py-3 rounded-xl font-bold transition transform hover:-translate-y-1 shadow-lg shadow-primary/30 flex items-center gap-2">
                             Let's Work Together
                         </a>
-                                <a href="assests/Marouane_Laamiri_Resume.pdf"
-                                    target="_blank" rel="noreferrer noopener"
+                        <a href="Marouane_Laamiri_Resume.pdf" 
+                           target="_blank" 
                            class="border border-secondary/50 hover:bg-secondary/10 text-secondary px-8 py-3 rounded-xl font-bold transition transform hover:-translate-y-1">
                             Download Resume
                         </a>
