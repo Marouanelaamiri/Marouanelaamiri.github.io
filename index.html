@@ -1,13 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio of Marouane Laamiri, software engineer and automation specialist." />
+    <link rel="stylesheet" href="style.css" />
     <title>Marouane Laamiri | Software Engineer</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header class="site-header">
+      <a class="brand" href="#home">Marouane Laamiri</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-media">
+          <img src="assests/avatar.png" alt="Marouane Laamiri" />
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">Software Engineer & Automation Specialist</p>
+          <h1>I <span id="typed-text">build reliability</span><span class="cursor" aria-hidden="true"></span></h1>
+          <p class="intro">
+            I build robust software architectures and automation tools that remove technical bottlenecks,
+            improve system stability, and keep operations efficient.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=laamirimarouane8@gmail.com" target="_blank" rel="noreferrer">Let's Work Together</a>
+            <a class="button secondary" href="assests/Marouane_Laamiri_Resume.pdf" target="_blank" rel="noreferrer noopener">View Resume</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Clean systems, practical automation, steady execution.</h2>
+        </div>
+        <div class="about-grid">
+          <article>
+            <h3>Background</h3>
+            <p>
+              Experienced in low-level C/C++ architecture development, hardware diagnostics, and Unix systems programming.
+              Currently focused on containerized environments, automation scripts, and full-stack web applications.
+            </p>
+          </article>
+          <article>
+            <h3>Focus Areas</h3>
+            <ul class="clean-list">
+              <li>Fault-tolerant concurrent systems in C/C++</li>
+              <li>Python automation for repetitive workflows</li>
+              <li>Docker infrastructure, networks, and persistent storage</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Profile</h3>
+            <p><strong>Name:</strong> Marouane Laamiri</p>
+            <p><strong>Role:</strong> Software Engineer</p>
+            <p><strong>Location:</strong> Morocco</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>Technical case studies</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-placeholder">Screenshot coming soon</div>
+            <div class="project-copy">
+              <h3>Inception: Docker Infrastructure</h3>
+              <p>Virtualized a secure infrastructure stack with Docker Compose, Nginx, WordPress, MariaDB, custom Dockerfiles, persistent volumes, and internal container networking.</p>
+              <div class="tags"><span>Docker</span><span>DevOps</span><span>Nginx/SQL</span></div>
+              <a href="https://github.com/Marouanelaamiri/Inception/blob/main/README.md" target="_blank" rel="noreferrer noopener">View Documentation</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-placeholder">Screenshot coming soon</div>
+            <div class="project-copy">
+              <h3>Transcendent: Full-Stack Web Platform</h3>
+              <p>Built a real-time web application with secure authentication, live data updates, WebSocket communication, database-backed state, and responsive SPA behavior.</p>
+              <div class="tags"><span>Full-Stack</span><span>JavaScript</span><span>WebSockets</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assests/minishell.png" alt="Minishell execution screenshot" />
+            <div class="project-copy">
+              <h3>Minishell: System Architecture</h3>
+              <p>Engineered a POSIX-style shell in C with lexer/parser logic, process pipelines, file descriptor management, environment handling, redirection, and signal control.</p>
+              <div class="tags"><span>Systems</span><span>Unix API</span><span>C</span></div>
+              <a href="https://github.com/Marouanelaamiri/minishell" target="_blank" rel="noreferrer">View Documentation</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assests/philo.gif" alt="Philosophers thread simulation" />
+            <div class="project-copy">
+              <h3>Philosophers: Concurrency</h3>
+              <p>Solved thread synchronization challenges with mutexes, precise timing, shared resource protection, and monitoring logic designed to avoid deadlocks and data races.</p>
+              <div class="tags"><span>Threads</span><span>Concurrency</span><span>C</span></div>
+              <a href="https://github.com/Marouanelaamiri/Philo" target="_blank" rel="noreferrer">View Documentation</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assests/cub3d.gif" alt="Cub3D raycasting engine" />
+            <div class="project-copy">
+              <h3>Cub3D: Graphics Engine</h3>
+              <p>Built a custom raycasting engine with manual geometry, map parsing, texture mapping, collision detection, and rendering optimized for smooth real-time movement.</p>
+              <div class="tags"><span>Graphics</span><span>Math</span><span>Optimization</span></div>
+              <a href="https://github.com/Marouanelaamiri/cub3D" target="_blank" rel="noreferrer">View Documentation</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <p class="eyebrow">Contact</p>
+        <h2>Available for engineering and automation work.</h2>
+        <a class="button primary" href="mailto:laamirimarouane8@gmail.com">laamirimarouane8@gmail.com</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Marouane Laamiri. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
