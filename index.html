@@ -143,11 +143,11 @@
             </div>
         </header>
 
-        <section class="mb-24 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500">
+        <section class="mb-24 overflow-hidden relative">
             <h2 class="text-center text-xs uppercase tracking-[0.3em] font-bold mb-10 text-gray-500">Technology
                 Ecosystem</h2>
             <div class="relative flex overflow-x-hidden">
-                <div class="animate-marquee whitespace-nowrap flex gap-16 items-center opacity-70">
+                <div class="animate-marquee whitespace-nowrap flex gap-16 items-center opacity-90">
                     <!-- Original Icons -->
                     <i class="fab fa-python text-5xl text-yellow-400" title="Python"></i>
                     <i class="fas fa-c text-5xl text-blue-500" title="C Language"></i>
@@ -304,12 +304,12 @@
             const currentPhrase = phrases[phraseIndex];
 
             if (isDeleting) {
-                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
-                charIndex--;
+                charIndex = Math.max(0, charIndex - 1);
+                textElement.textContent = currentPhrase.substring(0, charIndex);
                 typeSpeed = 50;
             } else {
-                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
-                charIndex++;
+                charIndex = Math.min(currentPhrase.length, charIndex + 1);
+                textElement.textContent = currentPhrase.substring(0, charIndex);
                 typeSpeed = 100;
             }
 
@@ -325,7 +325,7 @@
             setTimeout(type, typeSpeed);
         }
 
-        document.addEventListener('DOMContentLoaded', type);
+        type();
     </script>
 
 </body>
