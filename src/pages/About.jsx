@@ -1,8 +1,8 @@
 export default function About() {
   return (
-    <main className="flex-grow container mx-auto px-6 pt-32 pb-20 max-w-5xl">
+    <main className="grow container mx-auto px-6 pt-32 pb-20 max-w-5xl">
       <div className="bg-nav/60 backdrop-blur-md rounded-3xl border border-primary/30 shadow-2xl overflow-hidden">
-        <div className="bg-gradient-to-r from-primary to-purple-800 p-6 text-center">
+        <div className="bg-linear-to-r from-primary to-purple-800 p-6 text-center">
           <h2 className="text-2xl md:text-3xl font-pixel text-white">PLAYER PROFILE</h2>
         </div>
 

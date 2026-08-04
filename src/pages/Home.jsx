@@ -46,9 +46,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex-grow container mx-auto px-4 sm:px-6 pt-32 pb-20 max-w-5xl">
+    <main className="grow container mx-auto px-4 sm:px-6 pt-32 pb-20 max-w-5xl">
       <header className="flex flex-col md:flex-row items-center gap-10 mb-20">
-        <div className="relative group flex-shrink-0">
+        <div className="relative group shrink-0">
           <div className="absolute -inset-1 bg-primary rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
           <img
             src="/assets/avatar.png"

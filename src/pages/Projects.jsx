@@ -1,6 +1,6 @@
 export default function Projects() {
   return (
-    <main className="flex-grow container mx-auto px-6 pt-32 pb-20 max-w-6xl">
+    <main className="grow container mx-auto px-6 pt-32 pb-20 max-w-6xl">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold mb-4">Technical Case Studies</h2>
         <p className="text-secondary text-lg max-w-2xl mx-auto">
@@ -14,7 +14,7 @@ export default function Projects() {
         style={{ contentVisibility: 'auto', containIntrinsicSize: '1px 560px' }}
       >
         <div className="flex-1 order-1">
-          <div className="w-full min-h-[280px] rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 bg-white/5 flex items-center justify-center text-center text-xs uppercase tracking-[0.2em] text-gray-400 px-6 overflow-hidden">
+          <div className="w-full min-h-70 rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 bg-white/5 flex items-center justify-center text-center text-xs uppercase tracking-[0.2em] text-gray-400 px-6 overflow-hidden">
              {/* Replace with your actual image later */}
              <img src="/assets/inception.png" alt="Inception Docker Setup" className="w-full h-full object-cover" />
           </div>
