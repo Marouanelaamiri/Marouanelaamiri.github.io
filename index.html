@@ -77,15 +77,15 @@
             opacity: 1;
             filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.3));
         }
-        .tech-logo--python, .tech-logo--javascript { color: #facc15; }
-        .tech-logo--c { color: #3b82f6; }
-        .tech-logo--docker { color: #38bdf8; }
-        .tech-logo--linux { color: #f8fafc; }
-        .tech-logo--git { color: #ef4444; }
-        .tech-logo--terminal { color: #4ade80; }
-        .tech-logo--aws { color: #fb923c; }
-        .tech-logo--react { color: #60a5fa; }
-        .tech-logo--database { color: #cbd5e1; }
+        .tech-logo--python, .tech-logo--javascript { color: #facc15 !important; }
+        .tech-logo--c { color: #3b82f6 !important; }
+        .tech-logo--docker { color: #38bdf8 !important; }
+        .tech-logo--linux { color: #f8fafc !important; }
+        .tech-logo--git { color: #ef4444 !important; }
+        .tech-logo--terminal { color: #4ade80 !important; }
+        .tech-logo--aws { color: #fb923c !important; }
+        .tech-logo--react { color: #60a5fa !important; }
+        .tech-logo--database { color: #cbd5e1 !important; }
 
         @keyframes logo-marquee {
             to { transform: translateX(-50%); }
@@ -174,31 +174,31 @@
                 <div class="logo-marquee">
                     <div class="logo-marquee__group">
                     <!-- Original Icons -->
-                    <i class="fab fa-python tech-logo tech-logo--python" title="Python"></i>
-                    <i class="fas fa-c tech-logo tech-logo--c" title="C Language"></i>
-                    <i class="fab fa-docker tech-logo tech-logo--docker" title="Docker"></i>
-                    <i class="fab fa-linux tech-logo tech-logo--linux" title="Linux"></i>
-                    <i class="fab fa-git-alt tech-logo tech-logo--git" title="Git"></i>
-                    <i class="fas fa-terminal tech-logo tech-logo--terminal" title="Bash"></i>
-                    <i class="fab fa-aws tech-logo tech-logo--aws" title="AWS"></i>
+                    <i class="fab fa-python tech-logo tech-logo--python" title="Python" style="color:#facc15"></i>
+                    <i class="fas fa-c tech-logo tech-logo--c" title="C Language" style="color:#3b82f6"></i>
+                    <i class="fab fa-docker tech-logo tech-logo--docker" title="Docker" style="color:#38bdf8"></i>
+                    <i class="fab fa-linux tech-logo tech-logo--linux" title="Linux" style="color:#f8fafc"></i>
+                    <i class="fab fa-git-alt tech-logo tech-logo--git" title="Git" style="color:#ef4444"></i>
+                    <i class="fas fa-terminal tech-logo tech-logo--terminal" title="Bash" style="color:#4ade80"></i>
+                    <i class="fab fa-aws tech-logo tech-logo--aws" title="AWS" style="color:#fb923c"></i>
                     <!-- NEW SKILLS ADDED -->
-                    <i class="fab fa-react tech-logo tech-logo--react" title="React"></i>
-                    <i class="fab fa-js tech-logo tech-logo--javascript" title="TypeScript/JS"></i>
-                    <i class="fas fa-database tech-logo tech-logo--database" title="SQL/MariaDB"></i>
+                    <i class="fab fa-react tech-logo tech-logo--react" title="React" style="color:#60a5fa"></i>
+                    <i class="fab fa-js tech-logo tech-logo--javascript" title="TypeScript/JS" style="color:#facc15"></i>
+                    <i class="fas fa-database tech-logo tech-logo--database" title="SQL/MariaDB" style="color:#cbd5e1"></i>
                     </div>
 
                     <!-- Repeated for continuous loop -->
                     <div class="logo-marquee__group" aria-hidden="true">
-                    <i class="fab fa-python tech-logo tech-logo--python"></i>
-                    <i class="fas fa-c tech-logo tech-logo--c"></i>
-                    <i class="fab fa-docker tech-logo tech-logo--docker"></i>
-                    <i class="fab fa-linux tech-logo tech-logo--linux"></i>
-                    <i class="fab fa-git-alt tech-logo tech-logo--git"></i>
-                    <i class="fas fa-terminal tech-logo tech-logo--terminal"></i>
-                    <i class="fab fa-aws tech-logo tech-logo--aws"></i>
-                    <i class="fab fa-react tech-logo tech-logo--react"></i>
-                    <i class="fab fa-js tech-logo tech-logo--javascript"></i>
-                    <i class="fas fa-database tech-logo tech-logo--database"></i>
+                    <i class="fab fa-python tech-logo tech-logo--python" style="color:#facc15"></i>
+                    <i class="fas fa-c tech-logo tech-logo--c" style="color:#3b82f6"></i>
+                    <i class="fab fa-docker tech-logo tech-logo--docker" style="color:#38bdf8"></i>
+                    <i class="fab fa-linux tech-logo tech-logo--linux" style="color:#f8fafc"></i>
+                    <i class="fab fa-git-alt tech-logo tech-logo--git" style="color:#ef4444"></i>
+                    <i class="fas fa-terminal tech-logo tech-logo--terminal" style="color:#4ade80"></i>
+                    <i class="fab fa-aws tech-logo tech-logo--aws" style="color:#fb923c"></i>
+                    <i class="fab fa-react tech-logo tech-logo--react" style="color:#60a5fa"></i>
+                    <i class="fab fa-js tech-logo tech-logo--javascript" style="color:#facc15"></i>
+                    <i class="fas fa-database tech-logo tech-logo--database" style="color:#cbd5e1"></i>
                     </div>
                 </div>
             </div>
@@ -314,67 +314,7 @@
 
     </main>
 
-    <script>
-        (() => {
-            const textElement = document.getElementById('typewriter');
-            if (!textElement) {
-                return;
-            }
-
-            const fallbackPhrases = ['automate workflows', 'stabilize systems', 'simplify complexity', 'visualize data', 'build reliability'];
-            let timeoutId = null;
-            let cycleId = 0;
-
-            const getPhrases = () => Array.isArray(window.sitePhrases) && window.sitePhrases.length ? window.sitePhrases : fallbackPhrases;
-
-            const startTypewriter = () => {
-                cycleId += 1;
-                const activeCycle = cycleId;
-                window.clearTimeout(timeoutId);
-
-                const phrases = getPhrases();
-                let phraseIndex = 0;
-                let charIndex = 0;
-                let isDeleting = false;
-
-                textElement.textContent = '';
-
-                const type = () => {
-                    if (activeCycle !== cycleId) {
-                        return;
-                    }
-
-                    const currentPhrase = phrases[phraseIndex];
-
-                    if (isDeleting) {
-                        charIndex = Math.max(0, charIndex - 1);
-                    } else {
-                        charIndex = Math.min(currentPhrase.length, charIndex + 1);
-                    }
-
-                    textElement.textContent = currentPhrase.substring(0, charIndex);
-
-                    let typeSpeed = isDeleting ? 50 : 100;
-
-                    if (!isDeleting && charIndex === currentPhrase.length) {
-                        isDeleting = true;
-                        typeSpeed = 1800;
-                    } else if (isDeleting && charIndex === 0) {
-                        isDeleting = false;
-                        phraseIndex = (phraseIndex + 1) % phrases.length;
-                        typeSpeed = 350;
-                    }
-
-                    timeoutId = window.setTimeout(type, typeSpeed);
-                };
-
-                type();
-            };
-
-            startTypewriter();
-            document.addEventListener('languagechange', startTypewriter);
-        })();
-    </script>
+    <script src="script.js" defer></script>
 
 </body>
 
