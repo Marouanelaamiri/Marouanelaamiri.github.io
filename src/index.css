@@ -1,6 +1,14 @@
 
 @import "tailwindcss";
 
+@theme {
+  --color-bg-dark: #0c001f;
+  --color-nav: #1a013d;
+  --color-primary: #6c42d3;
+  --color-primary-hover: #8257e5;
+  --color-secondary: #b0a8d1;
+}
+
 @layer base {
   :root {
     --bg-dark: #0c001f;
@@ -16,6 +24,7 @@
   body {
     background-color: var(--bg-dark);
     color: var(--text-main);
+    min-width: 320px;
   }
 
   .pixelated {

@@ -11,7 +11,7 @@ export default function About() {
             <div className="relative mx-auto w-48 h-48 group">
               <div className="absolute inset-0 bg-primary rounded-full blur opacity-50"></div>
               <img
-                src="/assets/avatar.png"
+                src="/avatar.png"
                 alt="Marouane Laamiri"
                 className="relative w-full h-full rounded-full border-4 border-white object-cover"
               />
@@ -47,7 +47,7 @@ export default function About() {
                 Let's Work Together
               </a>
               <a
-                href="/assets/Marouane_Laamiri_Resume.pdf"
+                href="/Marouane_Laamiri_Resume.pdf"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="border border-secondary/50 hover:bg-secondary/10 text-secondary px-8 py-3 rounded-xl font-bold transition"

@@ -14,9 +14,8 @@ export default function Projects() {
         style={{ contentVisibility: 'auto', containIntrinsicSize: '1px 560px' }}
       >
         <div className="flex-1 order-1">
-          <div className="w-full min-h-70 rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 bg-white/5 flex items-center justify-center text-center text-xs uppercase tracking-[0.2em] text-gray-400 px-6 overflow-hidden">
-             {/* Replace with your actual image later */}
-             <img src="/assets/inception.png" alt="Inception Docker Setup" className="w-full h-full object-cover" />
+          <div className="w-full min-h-[17.5rem] rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 bg-white/5 flex items-center justify-center text-center text-xs uppercase tracking-[0.2em] text-gray-400 px-6">
+             Project screenshot coming soon
           </div>
         </div>
         <div className="flex-1 space-y-6 order-2">
@@ -78,9 +77,8 @@ export default function Projects() {
           </div>
         </div>
         <div className="flex-1 order-1 md:order-2">
-          <div className="w-full min-h-[240px] rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 bg-white/5 flex items-center justify-center text-center text-xs uppercase tracking-[0.2em] text-gray-400 px-6 overflow-hidden">
-             {/* Replace with your actual image later */}
-             <img src="/assets/transcendent.png" alt="Transcendent App Interface" className="w-full h-full object-cover" />
+          <div className="w-full min-h-[240px] rounded-2xl shadow-2xl shadow-primary/10 border border-primary/20 bg-white/5 flex items-center justify-center text-center text-xs uppercase tracking-[0.2em] text-gray-400 px-6">
+             Project screenshot coming soon
           </div>
         </div>
       </div>
@@ -92,7 +90,7 @@ export default function Projects() {
       >
         <div className="flex-1 order-1">
           <img
-            src="/assets/minishell.png"
+            src="/minishell.png"
             alt="Minishell Execution"
             className="w-full rounded-2xl shadow-2xl border border-primary/20 object-cover"
           />
@@ -162,7 +160,7 @@ export default function Projects() {
         </div>
         <div className="flex-1 order-1 md:order-2">
           <img
-            src="/assets/philo.gif"
+            src="/philo.gif"
             alt="Philosophers Thread Simulation"
             className="w-full rounded-2xl shadow-2xl border border-primary/20 object-cover"
           />
@@ -173,7 +171,7 @@ export default function Projects() {
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-nav/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/20 hover:border-primary/50 transition-all duration-500 mb-16 group">
         <div className="flex-1 order-1">
           <img
-            src="/assets/cub3d.gif"
+            src="/cub3d.gif"
             alt="Cub3D Raycasting Engine"
             className="w-full rounded-2xl shadow-2xl border border-primary/20 object-cover"
           />

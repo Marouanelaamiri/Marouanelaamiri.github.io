@@ -51,7 +51,7 @@ export default function Home() {
         <div className="relative group shrink-0">
           <div className="absolute -inset-1 bg-primary rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
           <img
-            src="/assets/avatar.png"
+            src="/avatar.png"
             alt="Marouane Laamiri"
             className="relative w-64 h-64 rounded-3xl border-2 border-primary/50 shadow-2xl object-cover"
           />
@@ -79,7 +79,7 @@ export default function Home() {
               Let's Work Together
             </a>
             <a
-              href="/assets/Marouane_Laamiri_Resume.pdf"
+              href="/Marouane_Laamiri_Resume.pdf"
               target="_blank"
               rel="noreferrer noopener"
               className="px-8 py-3 border border-secondary/50 hover:bg-secondary/10 text-secondary font-bold rounded-xl transition-all duration-300"
