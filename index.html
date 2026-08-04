@@ -71,7 +71,12 @@
         .technology-strip { overflow: hidden; width: 100%; }
         .logo-marquee { display: flex; width: max-content; animation: logo-marquee 25s linear infinite; will-change: transform; }
         .logo-marquee__group { display: flex; flex: none; align-items: center; gap: 4rem; padding-right: 4rem; }
-        .tech-logo { font-size: 3rem; line-height: 1; }
+        .tech-logo {
+            font-size: 3rem;
+            line-height: 1;
+            opacity: 1;
+            filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.3));
+        }
         .tech-logo--python, .tech-logo--javascript { color: #facc15; }
         .tech-logo--c { color: #3b82f6; }
         .tech-logo--docker { color: #38bdf8; }
@@ -120,7 +125,7 @@
                 <li><a href="index.html" class="hover:text-primary transition-colors" data-i18n="home">Home</a></li>
                 <li><a href="about.html" class="hover:text-primary transition-colors" data-i18n="about">About</a></li>
                 <li><a href="projects.html" class="hover:text-primary transition-colors" data-i18n="projects">Projects</a></li>
-                <li><select aria-label="Select language" class="language-select bg-transparent text-primary font-bold outline-none cursor-pointer"><option value="en">EN</option><option value="fr">FR</option><option value="ar">arb</option></select></li>
+                <li><select aria-label="Select language" class="language-select bg-transparent text-primary font-bold outline-none cursor-pointer"><option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option></select></li>
             </ul>
         </div>
     </nav>
@@ -310,45 +315,65 @@
     </main>
 
     <script>
-        const textElement = document.getElementById('typewriter');
-        let phrases = window.sitePhrases || ['automate workflows', 'stabilize systems', 'simplify complexity', 'visualize data', 'build reliability'];
-        let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typeSpeed = 100;
-
-        function type() {
-            const currentPhrase = phrases[phraseIndex];
-
-            if (isDeleting) {
-                charIndex = Math.max(0, charIndex - 1);
-                textElement.textContent = currentPhrase.substring(0, charIndex);
-                typeSpeed = 50;
-            } else {
-                charIndex = Math.min(currentPhrase.length, charIndex + 1);
-                textElement.textContent = currentPhrase.substring(0, charIndex);
-                typeSpeed = 100;
+        (() => {
+            const textElement = document.getElementById('typewriter');
+            if (!textElement) {
+                return;
             }
 
-            if (!isDeleting && charIndex === currentPhrase.length) {
-                isDeleting = true;
-                typeSpeed = 2000;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-                typeSpeed = 500;
-            }
+            const fallbackPhrases = ['automate workflows', 'stabilize systems', 'simplify complexity', 'visualize data', 'build reliability'];
+            let timeoutId = null;
+            let cycleId = 0;
 
-            setTimeout(type, typeSpeed);
-        }
+            const getPhrases = () => Array.isArray(window.sitePhrases) && window.sitePhrases.length ? window.sitePhrases : fallbackPhrases;
 
-        type();
-        document.addEventListener('languagechange', () => {
-            phrases = window.sitePhrases;
-            phraseIndex = 0;
-            charIndex = 0;
-            isDeleting = false;
-        });
+            const startTypewriter = () => {
+                cycleId += 1;
+                const activeCycle = cycleId;
+                window.clearTimeout(timeoutId);
+
+                const phrases = getPhrases();
+                let phraseIndex = 0;
+                let charIndex = 0;
+                let isDeleting = false;
+
+                textElement.textContent = '';
+
+                const type = () => {
+                    if (activeCycle !== cycleId) {
+                        return;
+                    }
+
+                    const currentPhrase = phrases[phraseIndex];
+
+                    if (isDeleting) {
+                        charIndex = Math.max(0, charIndex - 1);
+                    } else {
+                        charIndex = Math.min(currentPhrase.length, charIndex + 1);
+                    }
+
+                    textElement.textContent = currentPhrase.substring(0, charIndex);
+
+                    let typeSpeed = isDeleting ? 50 : 100;
+
+                    if (!isDeleting && charIndex === currentPhrase.length) {
+                        isDeleting = true;
+                        typeSpeed = 1800;
+                    } else if (isDeleting && charIndex === 0) {
+                        isDeleting = false;
+                        phraseIndex = (phraseIndex + 1) % phrases.length;
+                        typeSpeed = 350;
+                    }
+
+                    timeoutId = window.setTimeout(type, typeSpeed);
+                };
+
+                type();
+            };
+
+            startTypewriter();
+            document.addEventListener('languagechange', startTypewriter);
+        })();
     </script>
 
 </body>
